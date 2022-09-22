@@ -2,9 +2,9 @@
   background-color: var(--grey2);
   border: 1.4px solid var(--grey2);
   border-radius: 8px;
-  font-size: var(--headline);
-  font-weight: 500;
-  color: var(--black);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--grey3);
   cursor: pointer;
 }
 .buttonDefault:hover {

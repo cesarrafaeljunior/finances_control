@@ -1,9 +1,7 @@
+import { Header } from "../Header";
 import { Main } from "../Main";
+import "./style.css";
 
-export const Dashboard = () => {
-  return (
-    <Main>
-      <h1>Estou na dashboard</h1>
-    </Main>
-  );
+export const Dashboard = ({ setLogged }) => {
+  return <Header setLogged={setLogged} />;
 };
