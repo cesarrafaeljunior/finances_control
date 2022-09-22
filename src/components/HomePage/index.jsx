@@ -1,4 +1,5 @@
 import { Button } from "../Button";
+import { ButtonDefault } from "../Button";
 import { Container } from "../Container";
 import Logo from "./Img/illustration.svg";
 import "./style.css";
