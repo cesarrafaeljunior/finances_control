@@ -1,13 +1,18 @@
+import { useState } from "react";
 import "./App.css";
+import { Dashboard } from "./components/Dashboard";
 import { HomePage } from "./components/HomePage";
 import { Main } from "./components/Main";
 
-function App() {
+const App = () => {
+  const [loggedInUser, setLogged] = useState(false);
+
+  console.log(loggedInUser);
   return (
     <Main>
-      <HomePage />
+      {loggedInUser ? <Dashboard /> : <HomePage setLogged={setLogged} />}
     </Main>
   );
-}
+};
 
 export default App;

@@ -4,7 +4,12 @@ import { Container } from "../Container";
 import Logo from "./Img/illustration.svg";
 import "./style.css";
 
-export const HomePage = (props) => {
+export const HomePage = ({ setLogged }) => {
+  const goToDashboard = () => {
+    setLogged(true);
+    console.log("Entrei aqui");
+  };
+
   return (
     <div className="Box__Main">
       <Container>
@@ -17,7 +22,7 @@ export const HomePage = (props) => {
             <p>Centralize o controle das suas finanças</p>
           </div>
           <span>de forma rápida e segura</span>
-          <Button type="button">Iniciar</Button>
+          <Button func={goToDashboard}>Iniciar</Button>
         </section>
         <section className="Section__Logo">
           <img src={Logo} alt="" />
