@@ -28,7 +28,7 @@
   font-weight: var(--fontWeiExtraBold);
 }
 .Box__Title h1 {
-  font-weight: var(--fontWeiExtraBold);
+  color: white;
 }
 .Box__Title > span {
   color: var(--colorPrimary);

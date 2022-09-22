@@ -8,9 +8,13 @@ const App = () => {
   const [loggedInUser, setLogged] = useState(false);
 
   return (
-    <Main>
-      {loggedInUser ? <Dashboard /> : <HomePage setLogged={setLogged} />}
-    </Main>
+    <body>
+      {loggedInUser ? (
+        <Dashboard setLogged={setLogged} />
+      ) : (
+        <HomePage setLogged={setLogged} />
+      )}
+    </body>
   );
 };
 
