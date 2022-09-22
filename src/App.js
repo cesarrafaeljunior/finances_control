@@ -7,7 +7,6 @@ import { Main } from "./components/Main";
 const App = () => {
   const [loggedInUser, setLogged] = useState(false);
 
-  console.log(loggedInUser);
   return (
     <Main>
       {loggedInUser ? <Dashboard /> : <HomePage setLogged={setLogged} />}

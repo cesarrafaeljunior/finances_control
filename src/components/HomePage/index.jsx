@@ -6,8 +6,7 @@ import "./style.css";
 
 export const HomePage = ({ setLogged }) => {
   const goToDashboard = () => {
-    setLogged(true);
-    console.log("Entrei aqui");
+    setLogged((login) => !login);
   };
 
   return (
