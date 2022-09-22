@@ -39,6 +39,7 @@
   font-size: var(--fontSize1);
   font-weight: var(--fontWeiExtraBold);
   color: var(--white);
+  line-height: 48px;
 }
 
 .Section__Infos > span {
@@ -63,7 +64,7 @@
 
 .Section__Logo img {
   width: 100%;
-  max-width: 300px;
+  max-width: 220px;
 }
 
 @media (min-width: 768px) {
