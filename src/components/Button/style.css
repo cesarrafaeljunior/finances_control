@@ -1,0 +1,26 @@
+.buttonDefault {
+  background-color: var(--grey2);
+  border: 1.4px solid var(--grey2);
+  border-radius: 8px;
+  font-size: var(--headline);
+  font-weight: 500;
+  color: var(--black);
+  cursor: pointer;
+}
+.buttonDefault:hover {
+  background-color: var(--grey4);
+  color: var(--white);
+}
+
+button {
+  background-color: var(--colorPrimary);
+  border: 2px solid var(--colorPrimary);
+  border-radius: 8px;
+  font-size: var(--headline);
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--colorPrimary2);
+}
