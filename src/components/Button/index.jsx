@@ -11,3 +11,11 @@ export const ButtonDefault = ({ children, func }) => {
     </button>
   );
 };
+
+export const ButtonForm = ({ children }) => {
+  return (
+    <button type="submit" className="buttonForm">
+      {children}
+    </button>
+  );
+};

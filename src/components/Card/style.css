@@ -1,0 +1,45 @@
+.Card {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--grey2);
+}
+
+.Card__Box__one {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.Card__Box__one > h2 {
+  font-size: var(--fontSize5);
+  color: var(--grey4);
+}
+.Card__Box__one > p {
+  font-size: var(--fontSize4);
+  color: var(--grey3);
+}
+
+.Card__Box__two {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.Card__Box__two > p {
+  color: var(--grey4);
+}
+.trash {
+  padding: 5px;
+  opacity: 70%;
+  background-color: var(--grey2);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.trash:hover {
+  transform: scale(1.2);
+}

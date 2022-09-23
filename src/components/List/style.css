@@ -1,0 +1,47 @@
+.List__Financial {
+  width: 90%;
+  margin: 0 auto;
+  display: none;
+  background-color: var(--white);
+  height: 100%;
+  border: 1px solid var(--grey2);
+  flex-direction: column;
+  gap: 24px;
+}
+
+.Box__List {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.Box__List > h2 {
+  color: var(--grey4);
+}
+
+.Box__List > nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.Box__List > nav > button {
+  width: max-content;
+}
+.Box__List > nav > button:hover {
+  width: max-content;
+  background-color: var(--colorPrimary2);
+}
+
+.List__Financial > ul {
+  width: 100%;
+  height: 100%;
+}
+/* .List__Financial {
+  font-size: 50px;
+} */
