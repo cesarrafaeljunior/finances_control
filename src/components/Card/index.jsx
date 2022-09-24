@@ -1,15 +1,31 @@
 import "./style.css";
 import { FaTrash } from "react-icons/fa";
-export const Card = () => {
+export const Card = ({
+  obj,
+  listFiltredArray,
+  setListFiltred,
+  listTransation,
+  setTransation,
+}) => {
+  const removeItem = (obj) => {
+    setTransation(listTransation.filter((elemento) => elemento !== obj));
+    setListFiltred(listFiltredArray.filter((elemento) => elemento !== obj));
+  };
+
   return (
     <li className="Card">
       <div className="Card__Box__one">
-        <h2>Salário - Mês Dezembro</h2>
-        <p>Entrada</p>
+        <h2>{obj.description}</h2>
+        <p>{obj.type}</p>
       </div>
       <div className="Card__Box__two">
-        <p>R$ 6.660,00</p>
-        <FaTrash className="trash" />
+        <p>{obj.valueInput}R$</p>
+        <FaTrash
+          className="trash"
+          onClick={() => {
+            removeItem(obj);
+          }}
+        />
       </div>
     </li>
   );
