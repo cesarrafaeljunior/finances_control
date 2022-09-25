@@ -12,9 +12,9 @@ export const ButtonDefault = ({ children, func }) => {
   );
 };
 
-export const ButtonForm = ({ children }) => {
+export const ButtonForm = ({ children, func }) => {
   return (
-    <button type="submit" className="buttonForm">
+    <button type="submit" className="buttonForm" onClick={func}>
       {children}
     </button>
   );

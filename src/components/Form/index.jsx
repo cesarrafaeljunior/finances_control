@@ -54,7 +54,7 @@ export const Form = ({ setList }) => {
           </select>
         </div>
       </div>
-      <ButtonForm type="submit"> Inserir valor</ButtonForm>
+      <ButtonForm type="submit">Inserir valor</ButtonForm>
     </form>
   );
 };

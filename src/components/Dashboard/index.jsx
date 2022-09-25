@@ -29,7 +29,7 @@ export const Dashboard = ({ setLogged }) => {
         )}
         <Form setList={setTransation} />
         <Button func={openModal}>Abrir resumo</Button>
-        <TotalMoney />
+        <TotalMoney listTransation={listTransation} />
         {/* <FinancialList/> */}
       </Main>
     </>
