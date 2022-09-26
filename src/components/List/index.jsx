@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ButtonDefault } from "../Button";
 import { Card } from "../Card";
+import { NoCard } from "../NoCard";
 import "./style.css";
 
 export const FinancialList = ({ listTransation, setTransation }) => {
@@ -28,18 +29,22 @@ export const FinancialList = ({ listTransation, setTransation }) => {
         </nav>
       </div>
       <ul>
-        {listFiltredArray.map((element, i) => {
-          return (
-            <Card
-              obj={element}
-              key={i}
-              listFiltredArray={listFiltredArray}
-              setListFiltred={setListFiltred}
-              listTransation={listTransation}
-              setTransation={setTransation}
-            />
-          );
-        })}
+        {listFiltredArray.length == 0 || listTransation.length == 0 ? (
+          <NoCard />
+        ) : (
+          listFiltredArray.map((element, i) => {
+            return (
+              <Card
+                obj={element}
+                key={i}
+                listFiltredArray={listFiltredArray}
+                setListFiltred={setListFiltred}
+                listTransation={listTransation}
+                setTransation={setTransation}
+              />
+            );
+          })
+        )}
       </ul>
     </section>
   );

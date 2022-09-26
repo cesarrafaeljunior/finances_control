@@ -1,5 +1,5 @@
 .List__Financial {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: none;
   background-color: var(--white);
@@ -17,11 +17,12 @@
   justify-content: center;
   width: 100%;
   margin-top: 20px;
+  gap: 20px;
 }
 
 .Box__List > h2 {
-  text-align: start;
-  width: 45%;
+  text-align: center;
+  width: 100%;
   color: var(--grey4);
 }
 
@@ -52,27 +53,4 @@
 }
 
 @media (min-width: 800px) {
-  main {
-    flex-direction: row;
-  }
-  main .ButtonModal {
-    display: none;
-  }
-
-  main > div {
-    align-self: flex-start;
-  }
-
-  .List__Financial {
-    width: 57%;
-    display: flex;
-  }
-
-  .Box__List {
-    flex-direction: row;
-  }
-
-  .Box__Form__Main {
-    flex-direction: row;
-  }
 }

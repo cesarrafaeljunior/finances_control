@@ -19,7 +19,7 @@ export const Card = ({
         <p>{obj.type}</p>
       </div>
       <div className="Card__Box__two">
-        <p>{obj.valueInput}R$</p>
+        <p>R$ {obj.valueInput}</p>
         <FaTrash
           className="trash"
           onClick={() => {
