@@ -81,7 +81,13 @@ input {
   font-size: var(--headline);
 }
 
+main .ButtonModal {
+  align-self: center;
+}
+
 button {
+  align-self: center;
   width: 100%;
+  max-width: 300px;
   height: 48px;
 }

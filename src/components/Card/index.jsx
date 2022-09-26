@@ -13,7 +13,7 @@ export const Card = ({
   };
 
   return (
-    <li className="Card">
+    <li className={obj.type == "Entrada" ? "entrada Card" : "saida Card"}>
       <div className="Card__Box__one">
         <h2>{obj.description}</h2>
         <p>{obj.type}</p>

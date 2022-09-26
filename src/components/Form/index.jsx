@@ -2,14 +2,14 @@ import { useState } from "react";
 import { ButtonForm } from "../Button";
 import "./style.css";
 
-export const Form = ({ setList }) => {
+export const Form = ({ setTransation }) => {
   const [description, setDescription] = useState("");
   const [valueInput, setValueInput] = useState("");
   const [type, setType] = useState("");
 
   const getValuesForm = (e) => {
     e.preventDefault();
-    setList((oldListTransation) => {
+    setTransation((oldListTransation) => {
       return [...oldListTransation, { description, type, valueInput }];
     });
     setDescription("");
