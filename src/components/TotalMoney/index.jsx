@@ -1,12 +1,12 @@
 import "./style.css";
-export const TotalMoney = ({ listTransation }) => {
-  const total = listTransation.reduce((valAnt, acc) => {
-    if (acc.type == "Entrada") {
-      return Number(acc.valueInput) + Number(valAnt);
-    } else {
-      return valAnt;
-    }
-  }, 0);
+export const TotalMoney = ({ listFiltredArray }) => {
+  const total = listFiltredArray.reduce(
+    (valAnt, acc) =>
+      acc.type == "Entrada"
+        ? valAnt + Number(acc.valueInput)
+        : valAnt - Number(acc.valueInput),
+    0
+  );
 
   return (
     <section className="Section__Total__Money">

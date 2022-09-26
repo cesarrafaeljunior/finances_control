@@ -19,7 +19,9 @@ export const Card = ({
         <p>{obj.type}</p>
       </div>
       <div className="Card__Box__two">
-        <p>R$ {obj.valueInput}</p>
+        <p>
+          R$ {obj.type == "Despesa" ? `-${obj.valueInput}` : obj.valueInput}
+        </p>
         <FaTrash
           className="trash"
           onClick={() => {
