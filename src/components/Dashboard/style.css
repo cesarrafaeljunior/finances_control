@@ -45,7 +45,7 @@ main > button:hover {
   }
   .List__Financial {
     margin-top: 50px;
-    width: 80%;
+    min-width: 60%;
     display: flex;
   }
 
