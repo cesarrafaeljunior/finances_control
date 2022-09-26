@@ -5,10 +5,18 @@ main {
   margin: 0 auto;
   padding-bottom: 50px;
   max-width: 1200px;
+  gap: 30px;
 }
 
-main > button {
-  width: 50%;
+main > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+main .ButtonModal {
+  width: 100%;
   padding: 10px 0;
   align-self: center;
   margin-bottom: 20px;

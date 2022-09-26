@@ -27,10 +27,15 @@ export const Dashboard = ({ setLogged }) => {
             setTransation={setTransation}
           />
         )}
-        <Form setList={setTransation} />
-        <Button func={openModal}>Abrir resumo</Button>
-        <TotalMoney listTransation={listTransation} />
-        {/* <FinancialList/> */}
+        <div>
+          <Form setTransation={setTransation} />
+          <Button func={openModal}>Abrir resumo</Button>
+          <TotalMoney listTransation={listTransation} />
+        </div>
+        <FinancialList
+          listTransation={listTransation}
+          setTransation={setTransation}
+        />
       </Main>
     </>
   );
