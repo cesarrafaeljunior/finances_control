@@ -5,7 +5,7 @@ import "./style.css";
 import { TotalMoney } from "../TotalMoney";
 import { Button } from "../Button";
 import { useState } from "react";
-import { Modal } from "../Modal";
+import { Modal, ModalCredentials } from "../Modal";
 import { FinancialList } from "../List";
 
 export const Dashboard = ({ setLogged }) => {

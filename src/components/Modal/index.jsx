@@ -17,3 +17,11 @@ export const Modal = ({ setIsModalOpen, listTransation, setTransation }) => {
     </section>
   );
 };
+
+export const ModalCredentials = () => {
+  return (
+    <section className="Container__Modal__Credentials">
+      <h2>Campo inválida ou em branco!</h2>
+    </section>
+  );
+};

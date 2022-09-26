@@ -1,0 +1,11 @@
+.noCardImage {
+  width: 100%;
+  max-width: 100vw;
+  padding: 10px 20px;
+}
+
+.noCardImage > h2 {
+  font-size: 1.5rem;
+  color: var(--grey4);
+  margin-bottom: 30px;
+}

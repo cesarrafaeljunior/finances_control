@@ -1,25 +1,35 @@
 import { useState } from "react";
 import { ButtonForm } from "../Button";
+import { ModalCredentials } from "../Modal";
 import "./style.css";
 
 export const Form = ({ setTransation }) => {
   const [description, setDescription] = useState("");
   const [valueInput, setValueInput] = useState("");
   const [type, setType] = useState("");
+  const [isModalCredentials, setModalCredentials] = useState(false);
 
   const getValuesForm = (e) => {
     e.preventDefault();
-    setTransation((oldListTransation) => {
-      return [...oldListTransation, { description, type, valueInput }];
-    });
-    setDescription("");
-    setValueInput("");
-    setType("");
+    if (description == "" || valueInput == "" || type == "") {
+      setModalCredentials(true);
+      setTimeout(() => {
+        setModalCredentials(false);
+      }, 2000);
+    } else {
+      setTransation((oldListTransation) => {
+        return [...oldListTransation, { description, type, valueInput }];
+      });
+      setDescription("");
+      setValueInput("");
+      setType("");
+    }
   };
 
   return (
     <form onSubmit={getValuesForm}>
       <div className="Box__Form__Header">
+        {isModalCredentials && <ModalCredentials />}
         <label>Descrição</label>
         <input
           type="text"

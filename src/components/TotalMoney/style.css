@@ -1,11 +1,16 @@
 .Section__Total__Money {
+  width: 100%;
   display: flex;
   padding: 20px 20px;
   border: 1px solid var(--grey3);
   border-radius: 4px;
+  margin-bottom: 30px;
+  max-width: 400px;
+  align-self: center;
 }
 
 .Section__Total__Money > h2 {
+  font-size: 15px;
   color: var(--colorPrimary);
 }
 
@@ -18,9 +23,25 @@
 
 .Section__Total__Money > div > h3 {
   color: var(--grey4);
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .Section__Total__Money > div > p {
+  font-size: 15px;
   color: var(--grey3);
+}
+
+@media (min-width: 800px) {
+  .Section__Total__Money > h2 {
+    font-size: 16px;
+    color: var(--colorPrimary);
+  }
+  .Section__Total__Money > div > h3 {
+    color: var(--grey4);
+    font-size: 18px;
+  }
+  .Section__Total__Money > div > p {
+    font-size: 18px;
+    color: var(--grey3);
+  }
 }
