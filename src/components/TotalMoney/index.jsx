@@ -1,7 +1,11 @@
 import "./style.css";
 export const TotalMoney = ({ listTransation }) => {
   const total = listTransation.reduce((valAnt, acc) => {
-    return Number(acc.valueInput) + Number(valAnt);
+    if (acc.type == "Entrada") {
+      return Number(acc.valueInput) + Number(valAnt);
+    } else {
+      return valAnt;
+    }
   }, 0);
 
   return (
