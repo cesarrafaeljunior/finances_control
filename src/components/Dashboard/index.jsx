@@ -10,6 +10,7 @@ import { FinancialList } from "../List";
 
 export const Dashboard = ({ setLogged }) => {
   const [listTransation, setTransation] = useState([]);
+  const [listFiltredArray, setListFiltred] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -28,13 +29,20 @@ export const Dashboard = ({ setLogged }) => {
           />
         )}
         <div>
-          <Form setTransation={setTransation} />
+          <Form
+            listTransation={listTransation}
+            setTransation={setTransation}
+            listFiltredArray={listFiltredArray}
+            setListFiltred={setListFiltred}
+          />
           <Button func={openModal}>Abrir resumo</Button>
-          <TotalMoney listTransation={listTransation} />
+          <TotalMoney listFiltredArray={listFiltredArray} />
         </div>
         <FinancialList
           listTransation={listTransation}
           setTransation={setTransation}
+          listFiltredArray={listFiltredArray}
+          setListFiltred={setListFiltred}
         />
       </Main>
     </>

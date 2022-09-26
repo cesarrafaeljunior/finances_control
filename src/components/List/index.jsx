@@ -4,17 +4,21 @@ import { Card } from "../Card";
 import { NoCard } from "../NoCard";
 import "./style.css";
 
-export const FinancialList = ({ listTransation, setTransation }) => {
-  const [listFiltredArray, setListFiltred] = useState(listTransation);
-
+export const FinancialList = ({
+  listTransation,
+  setTransation,
+  listFiltredArray,
+  setListFiltred,
+}) => {
   const filterList = (e) => {
     if (e.target.innerText == "Todos") {
-      setListFiltred(listTransation);
+      setTransation(listFiltredArray);
     } else {
-      const listFiltred = listTransation.filter((elemento) => {
-        return elemento.type == e.target.innerText;
-      });
-      setListFiltred(listFiltred);
+      setTransation(
+        listFiltredArray.filter((elemento) => {
+          return elemento.type == e.target.innerText;
+        })
+      );
     }
   };
 
@@ -29,10 +33,8 @@ export const FinancialList = ({ listTransation, setTransation }) => {
         </nav>
       </div>
       <ul>
-        {listFiltredArray.length == 0 || listTransation.length == 0 ? (
-          <NoCard />
-        ) : (
-          listFiltredArray.map((element, i) => {
+        {listTransation.length > 0 ? (
+          listTransation.map((element, i) => {
             return (
               <Card
                 obj={element}
@@ -44,6 +46,8 @@ export const FinancialList = ({ listTransation, setTransation }) => {
               />
             );
           })
+        ) : (
+          <NoCard />
         )}
       </ul>
     </section>

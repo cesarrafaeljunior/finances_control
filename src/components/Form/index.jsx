@@ -3,7 +3,12 @@ import { ButtonForm } from "../Button";
 import { ModalCredentials } from "../Modal";
 import "./style.css";
 
-export const Form = ({ setTransation }) => {
+export const Form = ({
+  listTransation,
+  setTransation,
+  listFiltredArray,
+  setListFiltred,
+}) => {
   const [description, setDescription] = useState("");
   const [valueInput, setValueInput] = useState("");
   const [type, setType] = useState("");
@@ -17,9 +22,8 @@ export const Form = ({ setTransation }) => {
         setModalCredentials(false);
       }, 2000);
     } else {
-      setTransation((oldListTransation) => {
-        return [...oldListTransation, { description, type, valueInput }];
-      });
+      setTransation([...listTransation, { description, type, valueInput }]);
+      setListFiltred([...listFiltredArray, { description, type, valueInput }]);
       setDescription("");
       setValueInput("");
       setType("");
