@@ -2,8 +2,10 @@
   display: flex;
   gap: 10px;
   padding: 10px;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   background-color: var(--grey2);
+  border: solid 1px var(--grey3);
 }
 
 .Card__Box__one {
@@ -26,7 +28,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 20px;
 }
 
@@ -42,4 +44,14 @@
 }
 .trash:hover {
   transform: scale(1.2);
+}
+
+.entrada {
+  border-left: solid 4px #03b898;
+  border-radius: 8px;
+}
+
+.saida {
+  border-left: solid 4px #e34981;
+  border-radius: 8px;
 }

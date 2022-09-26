@@ -11,7 +11,7 @@
   gap: 20px;
   animation: openModal 0.5s;
 }
-.Container__Modal > button {
+.Container__Modal > .ButtonModal {
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -20,6 +20,8 @@
   transition: all 0.5s;
   border: solid 1px transparent;
   font-weight: 700;
+  padding: 0;
+  font-size: 20px;
 }
 .Container__Modal > button:hover {
   transform: scale(1.2);
@@ -27,11 +29,30 @@
 .Container__Modal > .List__Financial {
   display: flex;
 }
+
+.Container__Modal__Credentials {
+  position: fixed;
+  bottom: 20px;
+  left: 15%;
+  width: 350px;
+  height: 50px;
+  background-color: rgb(219, 59, 59);
+  border-left: solid 5px black;
+  border-radius: 10px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  animation: openModal 0.5s;
+  color: var(--white);
+}
+
 @keyframes openModal {
   0% {
-    transform: translateY(-100%);
+    transform: translatex(-100%);
   }
   100% {
-    transform: translateY(0);
+    transform: translatex(0);
   }
 }
