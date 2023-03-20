@@ -16,7 +16,7 @@ O cálculo de entradas e saídas acontece dinamicamente.
 - HTML/CSS/JavaScript
 - React
 
-#Implantação em produção
+# Implantação em produção
 - Vercel
 
 # Autor
